@@ -1,0 +1,206 @@
+body {
+    font-family: $font-stack-primary;
+    a {
+        text-decoration: none;
+    }
+    @media screen and (min-width: 375px){
+       
+    }
+}
+.bold-font {
+    font-weight: bold;
+    
+}
+.hero-container {
+    @extend %center;
+    z-index: 0;
+    @media(min-width: 600px){
+        background-image: url('../images/hero.png');
+        background-size: cover;
+        height: 75vh;
+    }
+}
+.filter-wrapper {
+    width: 100%;
+    background-color: rgba(241, 241, 241, 0.4);
+    @extend %center;
+    flex-direction: column;
+    margin: 0 30px;
+    @media screen and (min-width: 600px){
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: auto;
+        flex-direction: row;
+        margin: 0;
+    }
+    .btn-secondary{
+        background-color: white;
+        color: black;
+        margin-top: 16px;
+    }
+}
+
+
+// Chosen item
+
+.info-wrapper{
+    @extend %margin;
+    display: flex;
+    flex-direction: column;
+    .address-wrapper{
+        display: flex;
+        align-items: baseline;
+        border-bottom: 1px solid #000;
+        h2 {
+            font-size: 1.875rem;
+        }
+        h4 {
+            font-size: 1.3125rem;
+            color: #1376C9;
+        }
+        @extend %margin-top-mix;
+    }
+    .price-wrapper {
+        border-bottom: 1px solid #E5E5E5;
+        h2 {
+            font-size: 1.875rem;
+        }
+        h4 {
+            font-size: 1.3125rem;
+            margin: 1rem 0;
+        }
+        @media screen and (min-width: 500px){
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+        
+    }
+    .gray-box {
+        border-radius: 15px;
+        background-color: #E5E5E5;
+        width: 317px;
+        display: flex;
+        flex-direction: column;
+        padding: 8px;
+        h3 {
+            font-size: 1.125rem;
+            display: inline-block;
+        }
+        @extend %margin-top-mix;
+    }
+    .paragraph-wrapper {
+        font-size: 1rem;
+        @extend %margin-top-mix;
+    }
+    .secondary-info-wrapper{
+        #leigist-head{
+            font-size: 1.3125rem;
+            border-bottom: 1px solid #E5E5E5;
+            display: block;
+            
+        }
+        p{
+            line-height: 20px;
+        }
+        li {
+            font-size: 1.125rem;
+            margin-top: 0.5rem;
+        }
+        @extend %margin-top-mix;
+    }
+}
+.nyjustu-header{
+    display: flex;
+    justify-content: flex-start;
+    max-width: auto;
+    margin:0 30px;
+    margin-top: 42px;
+    h1 {
+        color: #1376C9;
+        font-size: 30px;
+        margin: 16px 0;
+    }
+    @media screen and (min-width: 900px){
+        margin: 0 130px;
+        margin-top: 42px;
+    }
+}
+.new-items-wrapper {
+    @extend %center;
+    flex-direction: column;
+    margin: 0 30px;
+    @media screen and (min-width: 600px){
+       flex-direction: row;
+       flex-wrap: wrap;
+       justify-content: space-between;
+    }
+    @media screen and (min-width: 900px){
+        margin: 0 130px;
+    }
+}
+
+.action-section {
+    @extend %margin;
+    display: flex;
+    justify-content: space-between;
+    margin-top: 80px;
+    flex-direction: column;
+    @extend %center;
+    @media screen and(min-width: 600px){
+        flex-direction: row;
+    }
+}
+
+// CARD 
+.card-wrapper {
+    flex-grow: 1;
+    flex-shrink: 0;
+    padding: 0 8px !important;
+    box-shadow: 2px 7px 8px #888888;
+    margin-top: 16px;
+    margin-right: 16px;
+    flex-basis: 33%;
+    @media screen and (min-width: 768px) {
+        flex-basis: 30%;
+    }
+    img {
+        width: calc(100% + 16px);
+        margin-left: -8px;
+    }
+    h2 {
+        font-size: 1.125rem;
+    }
+    &:hover
+    {
+            -webkit-transform: scale(1.01);
+            -ms-transform: scale(1.01);
+            transform: scale(1.01);
+    }
+}
+.card-address-top {
+    display: flex;
+    justify-content: space-between;
+    padding: 8px 0;
+}
+.card-address-lower {
+    display: flex;
+    justify-content: space-between;
+    h4 {
+        color: #1376C9;
+    }
+}
+.card-paragraph{
+    margin: 8px 0;
+}
+.card-price {
+    display: flex;
+    justify-content: flex-end;
+    border-top: 1px solid #E5E5E5;
+    padding: 8px 0;
+}
+
+.dropdown {
+    margin-right: 16px;
+}
